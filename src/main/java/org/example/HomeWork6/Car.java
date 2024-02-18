@@ -1,8 +1,8 @@
 package org.example.HomeWork6;
 
-public class Car extends MotorTransport{
-    String brand;
-    String model;
+public class Car extends MotorTransport {
+    private String brand;
+    private String model;
 
     public Car(Integer numberOfWheels, Integer maxSpeed, String engineType, String brand, String model) {
         super(numberOfWheels, maxSpeed, engineType);

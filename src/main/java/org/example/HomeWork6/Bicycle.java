@@ -1,7 +1,7 @@
 package org.example.HomeWork6;
 
 public class Bicycle extends WheeledTransport{
-    public String typeOfBicycle;
+    private String typeOfBicycle;
 
 
     public Bicycle(Integer numberOfWheels, Integer maxSpeed, String typeOfBicycle) {
