@@ -28,13 +28,13 @@ public class Main {
         transport.service();
         if (transport instanceof Car) {
             Car toyota = (Car) transport;
-            toyota.doSomething();
+            toyota.doForUse();
         } else if (transport instanceof Bicycle) {
             Bicycle bicycle = (Bicycle) transport;
-            bicycle.doSomething();
+            bicycle.doForWalk();
         } else if (transport instanceof Truck) {
             Truck truck = (Truck) transport;
-            truck.doSomething();
+            truck.doForLoad();
         }
         return transport;
     }

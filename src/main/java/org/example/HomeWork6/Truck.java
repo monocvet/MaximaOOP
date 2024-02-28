@@ -21,7 +21,7 @@ public final class Truck extends MotorTransport {
         super.service();
         System.out.println("Обслуживание грузовика грузоподъемностью: " + capacity + " тонн.");
     }
-    public final void doSomething(){
+    public final void doForLoad(){
         System.out.println("Грузовик готов к погрузке.");
     }
 }
