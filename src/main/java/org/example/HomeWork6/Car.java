@@ -1,6 +1,6 @@
 package org.example.HomeWork6;
 
-public class Car extends MotorTransport {
+public final class Car extends MotorTransport {
     private String brand;
     private String model;
 
@@ -30,5 +30,8 @@ public class Car extends MotorTransport {
     void service() {
         super.service();
         System.out.println("Обслуживание автомобиля марки: " + brand + " Модель: " + model);
+    }
+    public final void doSomething(){
+        System.out.println("Легковой автомобиль " + this.model + " готов к эксплуатации.");
     }
 }
