@@ -1,6 +1,6 @@
 package org.example.HomeWork6;
 
-public class Bicycle extends WheeledTransport{
+public final class Bicycle extends WheeledTransport{
     private String typeOfBicycle;
 
 
@@ -21,5 +21,8 @@ public class Bicycle extends WheeledTransport{
     void service() {
         super.service();
         System.out.println("Обслужено навесное оборудование велосипеда типа: " + typeOfBicycle);
+    }
+    public final void doForWalk () {
+        System.out.println("Велосипед можно использвать для прогулки.");
     }
 }

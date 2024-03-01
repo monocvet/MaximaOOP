@@ -1,6 +1,6 @@
 package org.example.HomeWork6;
 
-public class Truck extends MotorTransport {
+public final class Truck extends MotorTransport {
     private Integer capacity;
 
     public Truck(Integer numberOfWheels, Integer maxSpeed, String engineType, Integer capacity) {
@@ -20,5 +20,8 @@ public class Truck extends MotorTransport {
     void service() {
         super.service();
         System.out.println("Обслуживание грузовика грузоподъемностью: " + capacity + " тонн.");
+    }
+    public final void doForLoad(){
+        System.out.println("Грузовик готов к погрузке.");
     }
 }
