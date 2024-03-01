@@ -17,8 +17,11 @@ public final class Truck extends MotorTransport {
     }
 
     @Override
-    void service() {
+   public void service() {
         super.service();
+        checkEngine();
+    }
+    private void checkEngine() {
         System.out.println("Обслуживание грузовика грузоподъемностью: " + capacity + " тонн.");
     }
     public final void doForLoad(){
