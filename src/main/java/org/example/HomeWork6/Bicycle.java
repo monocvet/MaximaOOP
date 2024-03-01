@@ -26,7 +26,7 @@ public final class Bicycle extends WheeledTransport{
         System.out.println("Обслужено навесное оборудование велосипеда типа: " + typeOfBicycle);
     }
 
-    public final void doForWalk () {
+    public void doForWalk () {
         System.out.println("Велосипед можно использвать для прогулки.");
     }
 }

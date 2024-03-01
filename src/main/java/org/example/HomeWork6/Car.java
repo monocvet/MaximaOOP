@@ -34,7 +34,7 @@ public final class Car extends MotorTransport {
     private void checkEngine() {
         System.out.println("Обслуживание автомобиля марки: " + brand + " Модель: " + model);
     }
-    public final void doForUse(){
+    public void doForUse(){
         System.out.println("Легковой автомобиль " + this.model + " готов к эксплуатации.");
     }
 }
