@@ -1,6 +1,6 @@
 package org.example.HomeWork6;
 
-public class WheeledTransport {
+public abstract class WheeledTransport implements Transport {
     private Integer wheelCount;
     private Integer maxSpeed;
 
@@ -25,7 +25,8 @@ public class WheeledTransport {
         this.maxSpeed = maxSpeed;
     }
 
-    void service() {
+    @Override
+    public void service() {
         System.out.println("Обслужено колёс - " + wheelCount);
     }
 }
