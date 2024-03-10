@@ -3,8 +3,8 @@ package org.example.HomeWork6;
 public final class Truck extends MotorTransport {
     private Integer capacity;
 
-    public Truck(Integer numberOfWheels, Integer maxSpeed, String engineType, Integer capacity) {
-        super(numberOfWheels, maxSpeed, engineType);
+    public Truck(MotorBuilder motorBuilder, Integer capacity) {
+        super(motorBuilder);
         this.capacity = capacity;
     }
 

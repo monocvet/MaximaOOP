@@ -4,8 +4,8 @@ public final class Bicycle extends WheeledTransport{
     private String typeOfBicycle;
 
 
-    public Bicycle(Integer numberOfWheels, Integer maxSpeed, String typeOfBicycle) {
-        super(numberOfWheels, maxSpeed);
+    public Bicycle(TransportBuilder transportBuilder, String typeOfBicycle) {
+        super(transportBuilder);
         this.typeOfBicycle = typeOfBicycle;
     }
 

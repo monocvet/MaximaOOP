@@ -4,9 +4,9 @@ public abstract class WheeledTransport implements Transport {
     private Integer wheelCount;
     private Integer maxSpeed;
 
-    public WheeledTransport(Integer numberOfWheels, Integer maxSpeed) {
-        this.wheelCount = numberOfWheels;
-        this.maxSpeed = maxSpeed;
+    public WheeledTransport(TransportBuilder transportBuilder) {
+        this.wheelCount = transportBuilder.wheelCount;
+        this.maxSpeed = transportBuilder.maxSpeed;
     }
 
     public Integer getWheelCount() {
@@ -28,5 +28,22 @@ public abstract class WheeledTransport implements Transport {
     @Override
     public void service() {
         System.out.println("Обслужено колёс - " + wheelCount);
+    }
+    public static abstract class TransportBuilder {
+        protected Integer wheelCount;
+        protected Integer maxSpeed;
+
+        public TransportBuilder() {
+        }
+
+        public TransportBuilder wheelCount(Integer wheelCount) {
+            this.wheelCount = wheelCount;
+            return this;
+        }
+        public TransportBuilder maxSpeed(Integer maxSpeed) {
+            this.maxSpeed = maxSpeed;
+            return this;
+        }
+        public abstract WheeledTransport build();
     }
 }
