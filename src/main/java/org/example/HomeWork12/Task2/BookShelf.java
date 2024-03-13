@@ -16,7 +16,7 @@ public class BookShelf {
             books.remove(bookName);
         }
         public void listBooks() {
-            System.out.println(books);
+            System.out.println(this.books);
         }
 
     }
