@@ -1,10 +1,11 @@
 package org.example.HomeWork16;
 
 import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class ThreadExample extends Thread {
     private StringBuilder sb;
-    private Lock lock;
+    private Lock lock = new ReentrantLock();
 
     public ThreadExample(StringBuilder sb, Lock lock) {
         this.sb = sb;
@@ -14,13 +15,19 @@ public class ThreadExample extends Thread {
     @Override
     public void run() {
         lock.lock();
-        for (int i = 0; i < 100; i++) {
-            System.out.print(sb);
+        try {
+            for (int i = 0; i < 100; i++) {
+                System.out.print(sb);
+            }
+            System.out.println();
+            char symbol = sb.charAt(0);
+            sb.setCharAt(0, ++symbol);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            lock.unlock();
         }
-        System.out.println();
-        char symbol = sb.charAt(0);
-        sb.setCharAt(0, ++symbol);
-        lock.unlock();
+
     }
 }
 
