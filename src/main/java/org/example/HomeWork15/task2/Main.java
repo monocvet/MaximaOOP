@@ -1,9 +1,11 @@
 package org.example.HomeWork15.task2;
 
+import lombok.extern.java.Log;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
+@Log
 public class Main {
     public static void main(String[] args) {
         List<Book> books = new ArrayList<Book>();
@@ -18,6 +20,6 @@ public class Main {
                 .map(Book::getName)
                 .toList();
 
-        list.forEach(System.out::println);
+        log.info("Список: " + list);
     }
 }

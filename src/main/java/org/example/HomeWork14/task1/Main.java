@@ -1,5 +1,8 @@
 package org.example.HomeWork14.task1;
 
+import lombok.extern.java.Log;
+
+@Log
 public class Main {
     public static void main(String[] args) {
         PhoneBook phoneBook = new PhoneBook();
@@ -15,7 +18,7 @@ public class Main {
         phoneBook.findContact("Ivan");
         phoneBook.findContact("Pavel");
 
-        System.out.println("-----------------------------------------");
+        log.info("-----------------------------------------");
 
         phoneBook.removeContact("Ivan");
         phoneBook.findContact("Ivan");

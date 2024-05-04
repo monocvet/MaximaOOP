@@ -1,7 +1,9 @@
 package org.example.HomeWork14.task4;
 
-import java.util.HashSet;
+import lombok.extern.java.Log;
 
+import java.util.HashSet;
+@Log
 public class Main {
     public static void main(String[] args) {
         HashSet<Integer> numbers1 = new HashSet<>();
@@ -15,17 +17,17 @@ public class Main {
 
         HashSet<Integer> intersection = new HashSet<>(numbers1);
         intersection.retainAll(numbers2);
-        System.out.println("Пересечение множеств: " + intersection);
-        System.out.println("----------------------------------------");
+        log.info("Пересечение множеств: " + intersection);
+        log.info("----------------------------------------");
 
         HashSet<Integer> union = new HashSet<>(numbers1);
         union.addAll(numbers2);
-        System.out.println("Объединение множеств:  " + union);
-        System.out.println("----------------------------------------");
+        log.info("Объединение множеств:  " + union);
+        log.info("----------------------------------------");
 
         HashSet<Integer> difference = new HashSet<>(numbers1);
         difference.removeAll(numbers2);
-        System.out.println("Разность первого множества и второго: " + difference);
+        log.info("Разность первого множества и второго: " + difference);
 
 
 

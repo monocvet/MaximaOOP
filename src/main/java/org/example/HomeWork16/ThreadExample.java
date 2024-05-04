@@ -1,11 +1,12 @@
 package org.example.HomeWork16;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
+import lombok.extern.java.Log;
 
+import java.util.concurrent.locks.Lock;
+@Log
 public class ThreadExample extends Thread {
     private StringBuilder sb;
-    private Lock lock = new ReentrantLock();
+    private Lock lock;
 
     public ThreadExample(StringBuilder sb, Lock lock) {
         this.sb = sb;
@@ -17,7 +18,7 @@ public class ThreadExample extends Thread {
         lock.lock();
         try {
             for (int i = 0; i < 100; i++) {
-                System.out.print(sb);
+                log.info("Поток" + i + " = " + sb);
             }
             System.out.println();
             char symbol = sb.charAt(0);
@@ -27,7 +28,6 @@ public class ThreadExample extends Thread {
         } finally {
             lock.unlock();
         }
-
     }
 }
 

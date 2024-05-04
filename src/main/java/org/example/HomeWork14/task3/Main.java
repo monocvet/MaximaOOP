@@ -1,12 +1,14 @@
 package org.example.HomeWork14.task3;
 
-import java.util.*;
+import lombok.extern.java.Log;
 
+import java.util.*;
+@Log
 public class Main {
     public static void main(String[] args) {
         HashSet<String> names = new HashSet<>();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите имена (чтобы завершить ввод, наберите stop: ");
+        log.info("Введите имена (чтобы завершить ввод, наберите stop: ");
 
        while (true) {
            String input = scanner.next();
@@ -17,9 +19,9 @@ public class Main {
        }
        scanner.close();
 
-        System.out.println("Уникальные имена: ");
+        log.info("Уникальные имена: ");
         for (String name : names) {
-            System.out.println(name);
+            log.info(name);
         }
     }
 }
