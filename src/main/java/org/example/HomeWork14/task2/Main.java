@@ -1,9 +1,11 @@
 package org.example.HomeWork14.task2;
 
+import lombok.extern.java.Log;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-
+@Log
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -18,9 +20,9 @@ public class Main {
                 splitWords.put(word, splitWords.containsKey(word) ? splitWords.get(word) + 1 : 1);
             }
 
-        System.out.print("Результат: ");
+        log.info("Результат: ");
         for (Map.Entry<String, Integer> entry : splitWords.entrySet()) {
-            System.out.print(entry.getKey() + ": " + entry.getValue() + " ");
+            log.info(entry.getKey() + ": " + entry.getValue() + " ");
         }
     }
 }

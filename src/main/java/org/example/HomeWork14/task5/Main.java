@@ -1,10 +1,12 @@
 package org.example.HomeWork14.task5;
 
+import lombok.extern.java.Log;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.TreeSet;
-
+@Log
 public class Main {
     public static void main(String[] args) {
         List<Employee> employees = new ArrayList<>();
@@ -14,16 +16,16 @@ public class Main {
         employees.add(new Employee("Ivan", 48900));
         employees.add(new Employee("Boris", 55300));
 
-        System.out.println("Сортировка сотрудников по имени человека: ");
+        log.info("Сортировка сотрудников по имени человека: ");
         Collections.sort(employees);
         for (Employee employee : employees) {
-            System.out.println(employee);
+            log.info("Работник: " + employee);
         }
 
-        System.out.println("\nСортировка сотрудников с компаратором: ");
+        log.info("\nСортировка сотрудников с компаратором: ");
         Collections.sort(employees, new EmployeeSalaryComparator());
         for (Employee employee : employees) {
-            System.out.println(employee);
+            log.info("Работник: " + employee);
         }
 
         TreeSet<Employee> employeesTreeSet = new TreeSet<>();
@@ -32,9 +34,9 @@ public class Main {
         employeesTreeSet.add(new Employee("Ivan", 48900));
         employeesTreeSet.add(new Employee("Boris", 55300));
 
-        System.out.println("\nСотрудники TreeSet без компаратора:");
+        log.info("\nСотрудники TreeSet без компаратора:");
         for (Employee employee : employeesTreeSet) {
-            System.out.println(employee);
+            log.info("Работник: " + employee);
         }
 
         TreeSet<Employee> employeesTreeSetWithComparator = new TreeSet<>(new EmployeeSalaryComparator());
@@ -43,9 +45,9 @@ public class Main {
         employeesTreeSetWithComparator.add(new Employee("Ivan", 48900));
         employeesTreeSetWithComparator.add(new Employee("Boris", 55300));
 
-        System.out.println("\nСотрудники TreeSet с компаратором:");
+        log.info("\nСотрудники TreeSet с компаратором:");
         for (Employee employee : employeesTreeSetWithComparator) {
-            System.out.println(employee);
+            log.info("Работник: " + employee);
         }
     }
 }
